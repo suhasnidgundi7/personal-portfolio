@@ -29,9 +29,9 @@ const ThemeUtils = () => {
       {/* Conditionally render the dark or light stylesheet based on the theme */}
       {theme === 'dark' ? (
         <link rel="stylesheet" href="assets/css/dark.css" type="text/css" />
-      ) : (
+      ) : theme === 'light' ? (
         <link rel="stylesheet" href="assets/css/light.css" type="text/css" />
-      )}
+      ) : <link rel="stylesheet" href="assets/css/light.css" type="text/css" />}
     </>
   );
 };
