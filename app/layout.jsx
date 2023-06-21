@@ -1,3 +1,4 @@
+import ThemeUtils from "@/utils/themeUtils"
 import Header from "./components/header"
 
 
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="assets/css/perfect-scrollbar.css" type="text/css" />
         <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css" />
         <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+        <ThemeUtils/>
       </head>
       <body>
 
@@ -32,9 +33,7 @@ export default function RootLayout({ children }) {
 
         <div className="page">
           <div className="page-content">
-
             <Header />
-
             <div className="content-area">
               <div className="animated-sections">
                 {children}
