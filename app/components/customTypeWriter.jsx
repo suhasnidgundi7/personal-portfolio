@@ -13,7 +13,8 @@ const CustomTypeWriter = () => {
                         {
                             strings: [
                                 "Web Developer",
-                                "Frontend Developer"
+                                "Frontend Developer",
+                                "Software Engineering"
                             ],
                             autoStart: true,
                             loop: true
