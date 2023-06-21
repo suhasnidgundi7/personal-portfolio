@@ -1,6 +1,6 @@
 import ThemeUtils from "@/utils/themeUtils"
 import Header from "./components/header"
-
+import Script from 'next/script'
 
 export const metadata = {
   title: '',
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="assets/css/perfect-scrollbar.css" type="text/css" />
         <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css" />
         <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" />
-        <ThemeUtils/>
+        <ThemeUtils />
       </head>
       <body>
 
@@ -41,6 +41,21 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </div>
+
+        <Script src="assets/js/jquery-2.1.3.min.js" />
+        <Script src="assets/js/owl.carousel.min.js" />
+        <Script src="assets/js/modernizr.custom.js" />
+        <Script src="assets/js/animating.js" />
+        <Script src="assets/js/imagesloaded.pkgd.min.js" />
+        <Script src="assets/js/jquery.googlemap.js" />
+        <Script src="assets/js/jquery.magnific-popup.min.js" />
+        <Script src="assets/js/jquery.shuffle.min.js" />
+        <Script src="assets/js/main.js" />
+        <Script src="assets/js/masonry.pkgd.min.js" />
+        <Script src="assets/js/perfect-scrollbar.min.js" />
+        <Script src="assets/js/validator.js" />
+
+
       </body>
     </html>
   )
