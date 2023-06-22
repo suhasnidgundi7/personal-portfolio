@@ -7,7 +7,7 @@ const CustomTypeWriter = () => {
     return (
         <>
 
-            <div class="sp-subtitle">
+            <div className="sp-subtitle">
                 <TypewriterComponent
                     options={
                         {

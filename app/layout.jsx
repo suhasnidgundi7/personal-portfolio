@@ -1,6 +1,7 @@
 import ThemeUtils from "@/utils/themeUtils"
 import Header from "./components/header"
 import Script from 'next/script'
+import { RouteAnimationContextProvider } from "@/context/RouteAnimationContext"
 
 export const metadata = {
   title: '',
@@ -10,6 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
+
     <html lang="en">
       <head>
         {/* CSS Imports */}
@@ -23,24 +25,28 @@ export default function RootLayout({ children }) {
       </head>
       <body>
 
-        {/* Animated Background */}
-        <div
-          className="lm-animated-bg"
-          style={{ backgroundImage: "url(assets/images/main_bg.png)" }}
-        ></div>
-        {/* /Animated Background */}
+        <RouteAnimationContextProvider>
+
+          {/* Animated Background */}
+          <div
+            className="lm-animated-bg"
+            style={{ backgroundImage: "url(assets/images/main_bg.png)" }}
+          ></div>
+          {/* /Animated Background */}
 
 
-        <div className="page">
-          <div className="page-content">
-            <Header />
-            <div className="content-area">
-              <div className="animated-sections">
-                {children}
+          <div className="page">
+            <div className="page-content">
+              <Header />
+              <div className="content-area">
+                <div className="animated-sections">
+                  {children}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </RouteAnimationContextProvider>
+
 
         <Script src="assets/js/jquery-2.1.3.min.js" />
         <Script src="assets/js/owl.carousel.min.js" />
