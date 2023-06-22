@@ -4,9 +4,9 @@ const loading = () => {
     return (
         <>
             {/* <!-- Loading animation --> */}
-            <div className="preloader">
-                <div className="preloader-animation">
-                    <div className="preloader-spinner">
+            <div classNameName="preloader">
+                <div classNameName="preloader-animation">
+                    <div classNameName="preloader-spinner">
                     </div>
                 </div>
             </div>
