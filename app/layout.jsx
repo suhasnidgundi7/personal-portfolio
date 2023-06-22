@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
         <Script src="assets/js/jquery-2.1.3.min.js" />
         <Script src="assets/js/owl.carousel.min.js" />
         <Script src="assets/js/modernizr.custom.js" />
-        <Script src="assets/js/animating.js" />
+        {/* <Script src="assets/js/animating.js" /> */}
         <Script src="assets/js/imagesloaded.pkgd.min.js" />
         <Script src="assets/js/jquery.googlemap.js" />
         <Script src="assets/js/jquery.magnific-popup.min.js" />

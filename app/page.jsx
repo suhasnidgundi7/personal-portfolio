@@ -18,12 +18,12 @@ const Home = () => {
         <meta name="description" content={metadata.description} />
       </Head>
       {/* Home Subpage */}
-
+      <div className="animated-section start-page section-active animated-section-moveFromRight">
         <div className="section-content vcentered">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12">
               <div className="title-block">
-                <h2>Alex Smith</h2>
+                <h2>Suhas Nidgundi</h2>
                 <div className="">
                   <div className="item">
                     <CustomTypeWriter />
@@ -33,6 +33,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div >
       {/* End of Home Subpage */}
     </>
   );
