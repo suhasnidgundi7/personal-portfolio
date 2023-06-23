@@ -7,7 +7,7 @@ const HomeSubPage = () => {
     return (
         <>
             {/* Home Subpage */}
-            <div className="animated-section start-page section-active animated-section-moveFromRight">
+            <div className="animated-section animated-section-moveFromTop">
                 <div className="section-content vcentered">
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-12">

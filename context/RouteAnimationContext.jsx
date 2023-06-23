@@ -1,5 +1,5 @@
 "use client"
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 
 const RouteAnimationContext = createContext({
   fromPage: "",
@@ -11,6 +11,11 @@ const RouteAnimationContext = createContext({
 export const RouteAnimationContextProvider = ({ children }) => {
   const [fromPage, setFromPage] = useState("")
   const [toPage, setToPage] = useState("")
+
+  useEffect(() => {
+    setFromPage(window.location.pathname);
+  }, [])
+  
 
   return (
     <RouteAnimationContext.Provider value={{ fromPage, setFromPage, toPage, setToPage }}>
