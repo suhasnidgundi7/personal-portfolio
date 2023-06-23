@@ -2,6 +2,7 @@ import ThemeUtils from "@/utils/themeUtils"
 import Header from "./components/header"
 import Script from 'next/script'
 import { RouteAnimationContextProvider } from "@/context/RouteAnimationContext"
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: '',
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
                 <div className="animated-sections">
                   <div className="animated-section animated-section-moveFromTop">
                     {children}
+                    <Analytics />
                   </div>
                 </div>
               </div>
