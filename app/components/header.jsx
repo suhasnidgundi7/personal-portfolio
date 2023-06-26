@@ -25,7 +25,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="header-titles">
-                        <h2>Alex Smith</h2>
+                        <h2>Suhas Nidgundi</h2>
                         <h4>Web Designer</h4>
                     </div>
                 </div>
