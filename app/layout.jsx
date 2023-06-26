@@ -1,8 +1,8 @@
 import ThemeUtils from "@/utils/themeUtils"
 import Header from "./components/header"
-import Script from 'next/script'
 import { RouteAnimationContextProvider } from "@/context/RouteAnimationContext"
 import { Analytics } from '@vercel/analytics/react';
+import "bootstrap/dist/css/bootstrap.css"
 
 export const metadata = {
   title: '',
@@ -15,13 +15,6 @@ export default function RootLayout({ children }) {
 
     <html lang="en">
       <head>
-        {/* CSS Imports */}
-        <link rel="stylesheet" href="assets/css/reset.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/animations.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/perfect-scrollbar.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" />
         <ThemeUtils />
       </head>
       <body>
