@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
 
     <html lang="en">
       <head>
-        <ThemeUtils />
+        <link rel="stylesheet" href="assets/css/globals.css" type="text/css" />
       </head>
       <body>
 
