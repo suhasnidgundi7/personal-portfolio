@@ -9,8 +9,6 @@ import * as Yup from "yup";
 
 const ContactForm = () => {
   const [theme, setTheme] = useState("light");
-  const form = useRef();
-
   const { userTheme } = useRouteAnimationContext(); // Accessing userTheme from the context
 
   useEffect(() => {
@@ -55,39 +53,38 @@ const ContactForm = () => {
                 values,
                 process.env.NEXT_PUBLIC_PUB_KEY
               )
-              .then(
-                (result) => {
-                  toast.success(
-                    "🎉 Your message has been sent! We will get back to you soon.",
-                    {
-                      position: "bottom-right",
-                      autoClose: 5000,
-                      hideProgressBar: false,
-                      closeOnClick: true,
-                      pauseOnHover: true,
-                      draggable: true,
-                      progress: undefined,
-                      theme: theme,
-                    }
-                  );
-                },
-                (error) => {
-                  toast.error(
-                    "⚠️ Oops! Something went wrong. Please try again later.",
-                    {
-                      position: "bottom-right",
-                      autoClose: 5000,
-                      hideProgressBar: false,
-                      closeOnClick: true,
-                      pauseOnHover: true,
-                      draggable: true,
-                      progress: undefined,
-                      theme: theme,
-                    }
-                  );
-                }
-              );
-            setSubmitting(false);
+              .then((result) => {
+                toast.success(
+                  "🎉 Your message has been sent! We will get back to you soon.",
+                  {
+                    position: "bottom-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: theme,
+                  }
+                );
+                setSubmitting(false);
+              })
+              .catch((error) => {
+                alert(error);
+                toast.error(
+                  "⚠️ Oops! Something went wrong. Please try again later.",
+                  {
+                    position: "bottom-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: theme,
+                  }
+                );
+              });
           }}
         >
           {({
