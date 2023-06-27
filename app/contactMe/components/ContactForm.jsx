@@ -45,12 +45,17 @@ const ContactForm = () => {
             subject: Yup.string().required("Subject is required"),
             message: Yup.string().required("Message is required"),
           })}
-          onSubmit={(values, { setSubmitting }) => {
+          onSubmit={(values, { setSubmitting, resetForm }) => {
             emailjs
               .sendForm(
                 process.env.NEXT_PUBLIC_SERVICE_ID,
                 process.env.NEXT_PUBLIC_TEMPLATE_ID,
-                values,
+                {
+                  name: values.name,
+                  email: values.email,
+                  subject: values.subject,
+                  message: values.message,
+                },
                 process.env.NEXT_PUBLIC_PUB_KEY
               )
               .then((result) => {
@@ -69,6 +74,7 @@ const ContactForm = () => {
                   }
                 );
                 setSubmitting(false);
+                resetForm();
               })
               .catch((error) => {
                 alert(error);
@@ -86,6 +92,7 @@ const ContactForm = () => {
                   }
                 );
                 setSubmitting(false);
+                resetForm();
               });
           }}
         >
