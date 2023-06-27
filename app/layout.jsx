@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
         </RouteAnimationContextProvider>
       </body>
 
-      <Script src="https://www.google.com/recaptcha/api.js" />
+      
     </html>
   )
 }
