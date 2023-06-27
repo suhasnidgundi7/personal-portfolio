@@ -54,6 +54,7 @@ const ContactForm = () => {
                 process.env.NEXT_PUBLIC_PUB_KEY
               )
               .then((result) => {
+                alert(result);
                 toast.success(
                   "🎉 Your message has been sent! We will get back to you soon.",
                   {
