@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import "../blog.css"
 
 const post = () => {
   return (
@@ -13,12 +15,15 @@ const post = () => {
               </a>
             </div>
             <a href="">
-              <img
-                src="assets/images/blog/blog_post_1.jpg"
-                className="size-blog-masonry-image-two-c"
-                alt="Why I Switched to Sketch For UI Design"
-                title=""
-              />
+              <Image
+                  width={100}
+                  height={100}
+                  src="/assets/images/blog/blog_post_1.jpg"
+                  alt="Why I Switched to Sketch For UI Design"
+                  title=""
+                  className="blog-img"
+                />
+
               <div className="mask"></div>
             </a>
           </div>
