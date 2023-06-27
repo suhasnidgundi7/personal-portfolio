@@ -84,6 +84,7 @@ const ContactForm = () => {
                     theme: theme,
                   }
                 );
+                setSubmitting(false);
               });
           }}
         >
