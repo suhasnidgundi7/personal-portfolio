@@ -2,7 +2,6 @@ import Header from "./components/header"
 import { RouteAnimationContextProvider } from "@/context/RouteAnimationContext"
 import { Analytics } from '@vercel/analytics/react';
 import "bootstrap/dist/css/bootstrap.css"
-import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 

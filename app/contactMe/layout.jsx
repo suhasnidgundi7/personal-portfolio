@@ -1,4 +1,5 @@
 import Script from "next/script";
+import "./contactMe.css"
 
 export default function ContactMeLayout({
   children, // will be a page or nested layout
