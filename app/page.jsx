@@ -6,7 +6,7 @@ import Head from "next/head";
 import HomeSubPage from "./components/homeSubPage";
 
 export const metadata = {
-  title: "Home",
+  title: "Personal Portfolio | Home",
   description: "",
 };
 
