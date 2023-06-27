@@ -351,3 +351,9 @@ input[type="text"],
 .clearfix:after {
   clear: both;
 }
+
+@media only screen and (max-width: 768px) {
+  .info-list {
+    margin-top: 20px;
+  }
+}
