@@ -9,7 +9,7 @@ const ContactForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, form.current, process.env.PUBLIC_KEY)
+    emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, form.current, "wIIDAt33JVhuGoGPP")
       .then((result) => {
         console.log(result.text);
       }, (error) => {
