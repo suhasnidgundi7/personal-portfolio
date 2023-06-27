@@ -1,3 +1,11 @@
+/* Custom CSS */
+.customImg {
+  width: auto;
+  /* min-width: max-content; */
+  /* max-width: min-content; */
+  display: block;
+  vertical-align: middle;
+}
 
 .block-title {
   display: inline-block;
@@ -362,4 +370,3 @@
 .fun-fact-block-text {
   display: block;
 }
-

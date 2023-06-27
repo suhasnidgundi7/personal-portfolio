@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Testimonials = () => {
@@ -17,8 +18,8 @@ const Testimonials = () => {
             {/* <!-- Testimonial 1 --> */}
             <div class="testimonial">
               <div class="img">
-                <img
-                  src="assets/images/testimonials/testimonial-1.jpg"
+                <Image width={100} height={100}
+                  src="/assets/images/testimonials/testimonial-1.jpg"
                   alt="Alex Smith"
                 />
               </div>
@@ -41,59 +42,6 @@ const Testimonials = () => {
             </div>
             {/* <!-- End of Testimonial 1 --> */}
 
-            {/* <!-- Testimonial 2 --> */}
-            <div class="testimonial">
-              <div class="img">
-                <img
-                  src="assets/images/testimonials/testimonial-2.jpg"
-                  alt="Alex Smith"
-                />
-              </div>
-              <div class="text">
-                <p>
-                  Vivamus at molestie dui, eu ornare orci. Curabitur vel egestas
-                  dolor. Nulla condimentum nunc sit amet urna tempus finibus.
-                  Duis mollis leo id ligula pellentesque, at vehicula dui
-                  ultrices.
-                </p>
-              </div>
-
-              <div class="author-info">
-                <h4 class="author">Robert Watkins</h4>
-                <h5 class="company">Endicott Shoes</h5>
-                <div class="icon">
-                  <i class="fas fa-quote-right"></i>
-                </div>
-              </div>
-            </div>
-            {/* <!-- End of Testimonial 2 --> */}
-
-            {/* <!-- Testimonial 3 --> */}
-            <div class="testimonial">
-              <div class="img">
-                <img
-                  src="assets/images/testimonials/testimonial-3.jpg"
-                  alt="Alex Smith"
-                />
-              </div>
-              <div class="text">
-                <p>
-                  Vivamus at molestie dui, eu ornare orci. Curabitur vel egestas
-                  dolor. Nulla condimentum nunc sit amet urna tempus finibus.
-                  Duis mollis leo id ligula pellentesque, at vehicula dui
-                  ultrices.
-                </p>
-              </div>
-
-              <div class="author-info">
-                <h4 class="author">Kristin Carroll</h4>
-                <h5 class="company">Helping Hand</h5>
-                <div class="icon">
-                  <i class="fas fa-quote-right"></i>
-                </div>
-              </div>
-            </div>
-            {/* <!-- End of Testimonial 3 --> */}
           </div>
         </div>
       </div>

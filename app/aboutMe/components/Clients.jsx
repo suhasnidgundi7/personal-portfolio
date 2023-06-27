@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Clients = () => {
@@ -16,43 +17,7 @@ const Clients = () => {
           <div class="clients owl-carousel">
             <div class="client-block">
               <a href="index.html#" target="_blank" title="Logo">
-                <img src="assets/images/clients/client-1.png" alt="Logo" />
-              </a>
-            </div>
-
-            <div class="client-block">
-              <a href="index.html#" target="_blank" title="Logo">
-                <img src="assets/images/clients/client-2.png" alt="Logo" />
-              </a>
-            </div>
-
-            <div class="client-block">
-              <a href="index.html#" target="_blank" title="Logo">
-                <img src="assets/images/clients/client-3.png" alt="Logo" />
-              </a>
-            </div>
-
-            <div class="client-block">
-              <a href="index.html#" target="_blank" title="Logo">
-                <img src="assets/images/clients/client-4.png" alt="Logo" />
-              </a>
-            </div>
-
-            <div class="client-block">
-              <a href="index.html#" target="_blank" title="Logo">
-                <img src="assets/images/clients/client-5.png" alt="Logo" />
-              </a>
-            </div>
-
-            <div class="client-block">
-              <a href="index.html#" target="_blank" title="Logo">
-                <img src="assets/images/clients/client-6.png" alt="Logo" />
-              </a>
-            </div>
-
-            <div class="client-block">
-              <a href="index.html#" target="_blank" title="Logo">
-                <img src="assets/images/clients/client-7.png" alt="Logo" />
+                <Image className="customImg" width={100} height={100} src="/assets/images/clients/client-1.png" alt="Logo" />
               </a>
             </div>
           </div>
