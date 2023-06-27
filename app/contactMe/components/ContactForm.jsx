@@ -136,7 +136,7 @@ const ContactForm = () => {
 
             <div
               className="g-recaptcha"
-              data-sitekey="6Lee9dMmAAAAABSl8VYMo_w7isu19-Ada794SH9t"
+              data-sitekey="6LfSAdQmAAAAALyrx7kkW2l1uQiP2WAQs73UMki_"
             ></div>
 
             <input
