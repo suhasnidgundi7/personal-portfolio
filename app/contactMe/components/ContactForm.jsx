@@ -52,10 +52,11 @@ const ContactForm = () => {
             <iframe
               frameBorder="0"
               scrolling="no"
-              marginHeight="0"
-              marginWidth="0"
-              src="https://maps.google.com/maps?q=San%20Francisco%2C%20S601%20Townsend%20Street%2C%20California%2C%20USA&amp;amp;t=m&amp;amp;z=16&amp;amp;output=embed&amp;amp;iwloc=near&amp;output=embed"
+              width="100%"
+              height="400px"
+              src="https://maps.google.com/maps?q=San%20Francisco%2C%20S601%20Townsend%20Street%2C%20California%2C%20USA&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near&amp;output=embed"
             ></iframe>
+
           </div>
         </div>
         <div className="block-title">
@@ -72,7 +73,7 @@ const ContactForm = () => {
               <div className="left-column">
                 <div className="form-group form-group-with-icon">
                   <input
-                    id="form_name"
+                    id="name"
                     type="text"
                     name="name"
                     className="form-control"
@@ -80,14 +81,14 @@ const ContactForm = () => {
                     required="required"
                     data-error="Name is required."
                   />
-                  <label>Full Name</label>
+                  <label htmlFor="name">Full Name</label>
                   <div className="form-control-border"></div>
                   <div className="help-block with-errors"></div>
                 </div>
 
                 <div className="form-group form-group-with-icon">
                   <input
-                    id="form_email"
+                    id="email"
                     type="email"
                     name="email"
                     className="form-control"
@@ -95,14 +96,14 @@ const ContactForm = () => {
                     required="required"
                     data-error="Valid email is required."
                   />
-                  <label>Email Address</label>
+                  <label htmlFor="email">Email Address</label>
                   <div className="form-control-border"></div>
                   <div className="help-block with-errors"></div>
                 </div>
 
                 <div className="form-group form-group-with-icon">
                   <input
-                    id="form_subject"
+                    id="subject"
                     type="text"
                     name="subject"
                     className="form-control"
@@ -110,7 +111,7 @@ const ContactForm = () => {
                     required="required"
                     data-error="Subject is required."
                   />
-                  <label>Subject</label>
+                  <label htmlFor="subject">Subject</label>
                   <div className="form-control-border"></div>
                   <div className="help-block with-errors"></div>
                 </div>
@@ -118,7 +119,7 @@ const ContactForm = () => {
               <div className="right-column">
                 <div className="form-group form-group-with-icon">
                   <textarea
-                    id="form_message"
+                    id="message"
                     name="message"
                     className="form-control"
                     placeholder=""
@@ -126,7 +127,7 @@ const ContactForm = () => {
                     required="required"
                     data-error="Please, leave me a message."
                   ></textarea>
-                  <label>Message</label>
+                  <label htmlFor="message">Message</label>
                   <div className="form-control-border"></div>
                   <div className="help-block with-errors"></div>
                 </div>
@@ -135,7 +136,7 @@ const ContactForm = () => {
 
             <div
               className="g-recaptcha"
-              data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"
+              data-sitekey="6Lee9dMmAAAAABSl8VYMo_w7isu19-Ada794SH9t"
             ></div>
 
             <input

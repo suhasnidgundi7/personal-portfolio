@@ -2,6 +2,7 @@ import Header from "./components/header"
 import { RouteAnimationContextProvider } from "@/context/RouteAnimationContext"
 import { Analytics } from '@vercel/analytics/react';
 import "bootstrap/dist/css/bootstrap.css"
+import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -38,7 +39,7 @@ export default function RootLayout({ children }) {
                   <div className="animated-section animated-section-moveFromTop">
                     {children}
                     <Analytics />
-                    <ToastContainer/>
+                    <ToastContainer />
                   </div>
                 </div>
               </div>
@@ -46,6 +47,8 @@ export default function RootLayout({ children }) {
           </div>
         </RouteAnimationContextProvider>
       </body>
+
+      <Script src="https://www.google.com/recaptcha/api.js" />
     </html>
   )
 }
