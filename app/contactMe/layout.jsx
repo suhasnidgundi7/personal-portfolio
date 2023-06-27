@@ -6,7 +6,7 @@ export default function ContactMeLayout({
 }) {
   return (
     <>
-      <section>{children}</section>
+      <section className="animated-section">{children}</section>
       <Script src="https://www.google.com/recaptcha/api.js" />
     </>
   );

@@ -1,10 +1,29 @@
-import React from 'react'
-import styles from './blog.module.css';
+import React from "react";
+import Post from "./components/post";
 
 const blog = () => {
   return (
-    <div>blog</div>
-  )
-}
+    <>
+      {/* <!-- Blog Subpage --> */}
+      <div className="page-title">
+        <h2>Blog</h2>
+      </div>
 
-export default blog
+      <div className="section-content">
+        <div className="row">
+          <div className="col-xs-12 col-sm-12">
+            <div className="blog-masonry two-columns clearfix">
+              <Post/>
+              <Post/>
+              <Post/>
+              <Post/>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <!-- End of Blog Subpage --> */}
+    </>
+  );
+};
+
+export default blog;

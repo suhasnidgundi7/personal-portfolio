@@ -1,27 +1,24 @@
-import Header from "./components/header"
-import { RouteAnimationContextProvider } from "@/context/RouteAnimationContext"
-import { Analytics } from '@vercel/analytics/react';
-import "bootstrap/dist/css/bootstrap.css"
+import Header from "./components/header";
+import { RouteAnimationContextProvider } from "@/context/RouteAnimationContext";
+import { Analytics } from "@vercel/analytics/react";
+import "bootstrap/dist/css/bootstrap.css";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
-  title: '',
-  description: '',
-}
+  title: "",
+  description: "",
+};
 
 export default function RootLayout({ children }) {
-
   return (
-
     <html lang="en">
       <head>
+        <link rel="stylesheet" href="assets/css/reset.css" type="text/css" />
         <link rel="stylesheet" href="assets/css/light.css" type="text/css" />
       </head>
       <body>
-
         <RouteAnimationContextProvider>
-
           {/* Animated Background */}
           <div
             className="lm-animated-bg"
@@ -29,25 +26,20 @@ export default function RootLayout({ children }) {
           ></div>
           {/* /Animated Background */}
 
-
           <div className="page">
             <div className="page-content">
               <Header />
               <div className="content-area">
                 <div className="animated-sections">
-                  <div className="animated-section animated-section-moveFromTop">
-                    {children}
-                    <Analytics />
-                    <ToastContainer />
-                  </div>
+                  {children}
+                  <Analytics />
+                  <ToastContainer />
                 </div>
               </div>
             </div>
           </div>
         </RouteAnimationContextProvider>
       </body>
-
-      
     </html>
-  )
+  );
 }
