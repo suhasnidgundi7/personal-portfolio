@@ -6,6 +6,8 @@ import { useRouteAnimationContext } from "@/context/RouteAnimationContext";
 import { toast } from "react-toastify";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import ContactMap from "./ContactMap";
+import ContactReCAPTCHA from "./ContactReCAPTCHA";
 
 const ContactForm = () => {
   const [theme, setTheme] = useState("light");
@@ -19,17 +21,7 @@ const ContactForm = () => {
     <>
       {/* <!-- Contact Form --> */}
       <div className="col-xs-12 col-sm-8">
-        <div id="map" className="map">
-          <div className="lmpixels-map">
-            <iframe
-              frameBorder="0"
-              scrolling="no"
-              width="100%"
-              height="400px"
-              src="https://maps.google.com/maps?q=San%20Francisco%2C%20S601%20Townsend%20Street%2C%20California%2C%20USA&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near&amp;output=embed"
-            ></iframe>
-          </div>
-        </div>
+        <ContactMap />
         <div className="block-title">
           <h3>
             How Can I <span>Help You?</span>
@@ -50,12 +42,7 @@ const ContactForm = () => {
               .sendForm(
                 process.env.NEXT_PUBLIC_SERVICE_ID,
                 process.env.NEXT_PUBLIC_TEMPLATE_ID,
-                {
-                  name: values.name,
-                  email: values.email,
-                  subject: values.subject,
-                  message: values.message,
-                },
+                values,
                 process.env.NEXT_PUBLIC_PUB_KEY
               )
               .then((result) => {
@@ -104,7 +91,6 @@ const ContactForm = () => {
             handleBlur,
             handleSubmit,
             isSubmitting,
-            /* and other goodies */
           }) => (
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="controls two-columns">
@@ -204,10 +190,7 @@ const ContactForm = () => {
                   </div>
                 </div>
 
-                <div
-                  className="g-recaptcha"
-                  data-sitekey="6LfSAdQmAAAAALyrx7kkW2l1uQiP2WAQs73UMki_"
-                ></div>
+                <ContactReCAPTCHA />
 
                 <input
                   disabled={isSubmitting}
