@@ -10,6 +10,7 @@ import ContactMap from "./ContactMap";
 import ContactReCAPTCHA from "./ContactReCAPTCHA";
 
 const ContactForm = () => {
+  const form = useRef();
   const [theme, setTheme] = useState("light");
   const { userTheme } = useRouteAnimationContext(); // Accessing userTheme from the context
 
@@ -42,7 +43,7 @@ const ContactForm = () => {
               .sendForm(
                 process.env.NEXT_PUBLIC_SERVICE_ID,
                 process.env.NEXT_PUBLIC_TEMPLATE_ID,
-                values,
+                form.current,
                 process.env.NEXT_PUBLIC_PUB_KEY
               )
               .then((result) => {
@@ -92,114 +93,122 @@ const ContactForm = () => {
             handleSubmit,
             isSubmitting,
           }) => (
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="controls two-columns">
-                <div className="fields clearfix">
-                  <div className="left-column">
-                    <div className="form-group form-group-with-icon">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="form-control"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.name}
-                        style={
-                          errors.name && touched.name && errors.name != ""
-                            ? { borderColor: "red" }
-                            : null
-                        }
-                      />
-                      <label htmlFor="name">Full Name</label>
-                      <div className="form-control-border"> </div>
-                      <div className="help-block with-errors">
-                        {errors.name && touched.name && errors.name}
-                      </div>
-                    </div>
-
-                    <div className="form-group form-group-with-icon">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.email}
-                        style={
-                          errors.email && touched.email && errors.email != ""
-                            ? { borderColor: "red" }
-                            : null
-                        }
-                      />
-                      <label htmlFor="email">Email Address</label>
-                      <div className="form-control-border"></div>
-                      <div className="help-block with-errors">
-                        {errors.email && touched.email && errors.email}
-                      </div>
-                    </div>
-                    <div className="form-group form-group-with-icon">
-                      <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        className="form-control"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.subject}
-                        style={
-                          errors.subject &&
-                          touched.subject &&
-                          errors.subject != ""
-                            ? { borderColor: "red" }
-                            : null
-                        }
-                      />
-                      <label htmlFor="subject">Subject</label>
-                      <div className="form-control-border"></div>
-                      <div className="help-block with-errors">
-                        {errors.subject && touched.subject && errors.subject}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="right-column">
-                    <div className="form-group form-group-with-icon">
-                      <textarea
-                        id="message"
-                        name="message"
-                        className="form-control"
-                        rows="7"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.message}
-                        style={
-                          errors.message &&
-                          touched.message &&
-                          errors.message != ""
-                            ? { borderColor: "red" }
-                            : null
-                        }
-                      ></textarea>
-                      <label htmlFor="message">Message</label>
-                      <div className="form-control-border"></div>
-                      <div className="help-block with-errors">
-                        {errors.message && touched.message && errors.message}
-                      </div>
-                    </div>
+            <>
+              {Object.keys(errors).some(
+                (field) => touched[field] && errors[field]
+              ) && (
+                <div className="alert alert-danger" role="alert">
+                  <div className="container">
+                    <ul>
+                      {touched.name && errors.name && <li>{errors.name}</li>}
+                      {touched.email && errors.email && <li>{errors.email}</li>}
+                      {touched.subject && errors.subject && (
+                        <li>{errors.subject}</li>
+                      )}
+                      {touched.message && errors.message && (
+                        <li>{errors.message}</li>
+                      )}
+                    </ul>
                   </div>
                 </div>
+              )}
+              <form ref={form} className="contact-form" onSubmit={handleSubmit}>
+                <div className="controls two-columns">
+                  <div className="fields clearfix">
+                    <div className="left-column">
+                      <div className="form-group form-group-with-icon">
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          className="form-control"
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          value={values.name}
+                          style={
+                            errors.name && touched.name && errors.name != ""
+                              ? { borderColor: "red" }
+                              : null
+                          }
+                        />
+                        <label htmlFor="name">Full Name</label>
+                        <div className="form-control-border"> </div>
+                      </div>
 
-                <ContactReCAPTCHA />
+                      <div className="form-group form-group-with-icon">
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          className="form-control"
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          value={values.email}
+                          style={
+                            errors.email && touched.email && errors.email != ""
+                              ? { borderColor: "red" }
+                              : null
+                          }
+                        />
+                        <label htmlFor="email">Email Address</label>
+                        <div className="form-control-border"></div>
+                      </div>
+                      <div className="form-group form-group-with-icon">
+                        <input
+                          type="text"
+                          id="subject"
+                          name="subject"
+                          className="form-control"
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          value={values.subject}
+                          style={
+                            errors.subject &&
+                            touched.subject &&
+                            errors.subject != ""
+                              ? { borderColor: "red" }
+                              : null
+                          }
+                        />
+                        <label htmlFor="subject">Subject</label>
+                        <div className="form-control-border"></div>
+                      </div>
+                    </div>
+                    <div className="right-column">
+                      <div className="form-group form-group-with-icon">
+                        <textarea
+                          id="message"
+                          name="message"
+                          className="form-control"
+                          rows="7"
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          value={values.message}
+                          style={
+                            errors.message &&
+                            touched.message &&
+                            errors.message != ""
+                              ? { borderColor: "red" }
+                              : null
+                          }
+                        ></textarea>
+                        <label htmlFor="message">Message</label>
+                        <div className="form-control-border"></div>
+                      </div>
+                    </div>
+                  </div>
 
-                <input
-                  disabled={isSubmitting}
-                  type="submit"
-                  className="button btn-send"
-                  value="Send message"
-                />
-              </div>
-            </form>
+                  <ContactReCAPTCHA />
+
+                  <input
+                    disabled={isSubmitting}
+                    type="submit"
+                    className="button btn-send"
+                    value="Send message"
+                  />
+                </div>
+              </form>
+            </>
           )}
         </Formik>
       </div>

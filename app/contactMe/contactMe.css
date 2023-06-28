@@ -364,3 +364,12 @@ input[type="text"],
     margin-top: 20px;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .controls.two-columns .right-column,
+  .controls.two-columns .left-column {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+}
