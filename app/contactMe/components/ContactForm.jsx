@@ -39,6 +39,7 @@ const ContactForm = () => {
             message: Yup.string().required("Message is required"),
           })}
           onSubmit={(values, { setSubmitting, resetForm }) => {
+            console.log(form.current);
             emailjs
               .sendForm(
                 process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -47,7 +48,7 @@ const ContactForm = () => {
                 process.env.NEXT_PUBLIC_PUB_KEY
               )
               .then((result) => {
-                alert(result);
+                alert(result.text);
                 toast.success(
                   "🎉 Your message has been sent! We will get back to you soon.",
                   {
