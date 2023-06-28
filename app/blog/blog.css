@@ -26,6 +26,9 @@
   display: block;
   position: relative;
   padding: 0;
+  @media (prefers-color-scheme: dark) {
+    background: #444;
+  }
   background: #fff;
 }
 .blog-card .post-image {
@@ -52,6 +55,9 @@
 }
 .blog-card .post-info {
   padding: 1em 1.4em 1.4em;
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid #444;
+  }
   border: 1px solid #f5f5f5;
   border-top: 0;
 }
@@ -75,6 +81,9 @@
 }
 .blog-card .post-date {
   display: inline-block;
+  @media (prefers-color-scheme: dark) {
+    color: #aaa;
+  }
   color: #888;
   font-size: 11px;
   line-height: 1.1em;
