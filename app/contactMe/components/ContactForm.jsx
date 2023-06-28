@@ -40,21 +40,15 @@ const ContactForm = () => {
           })}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             console.log(form.current);
-            const formData = new FormData(form.current);
-            const url = `https://api.emailjs.com/api/v1.0/email/send?service_id=${process.env.NEXT_PUBLIC_SERVICE_ID}&template_id=${process.env.NEXT_PUBLIC_TEMPLATE_ID}&user_id=${process.env.NEXT_PUBLIC_PUB_KEY}`;
-          
-            fetch(url, {
-              method: 'POST',
-              body: formData,
-            })
-              .then((response) => {
-                if (response.ok) {
-                  return response.text();
-                }
-                throw new Error('Network response was not ok.');
-              })
-              .then((data) => {
-                alert(data);
+            emailjs
+              .sendForm(
+                process.env.NEXT_PUBLIC_SERVICE_ID,
+                process.env.NEXT_PUBLIC_TEMPLATE_ID,
+                form.current,
+                process.env.NEXT_PUBLIC_PUB_KEY
+              )
+              .then((result) => {
+                alert(result.text);
                 toast.success(
                   "🎉 Your message has been sent! We will get back to you soon.",
                   {
@@ -205,7 +199,7 @@ const ContactForm = () => {
                     </div>
                   </div>
 
-                  <ContactReCAPTCHA />
+                  {/* <ContactReCAPTCHA /> */}
 
                   <input
                     disabled={isSubmitting}
