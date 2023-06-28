@@ -493,7 +493,9 @@ input[type="submit"]:focus {
   @media (prefers-color-scheme: dark) {
     background-color: #222;
   }
-  background-color: #fff;
+  @media (prefers-color-scheme: light) {
+    background-color: #fff;
+  }
   height: 100%;
   width: 100%;
   border-radius: 30px;
@@ -514,7 +516,9 @@ input[type="submit"]:focus {
   @media (prefers-color-scheme: dark) {
     background-color: #222;
   }
-  background-color: #fff;
+  @media (prefers-color-scheme: light) {
+    background-color: #fff;
+  }
   height: 100%;
   width: 100%;
   border-radius: 30px;
