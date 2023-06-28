@@ -6,6 +6,7 @@ import "./global.css"
 import "@/public/assets/css/reset.css"
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "@/public/assets/css/icon-font.min.css";
 
 export const metadata = {
   title: "Personal Portfolio | Suhas Nidgundi",

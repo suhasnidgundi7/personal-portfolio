@@ -10,7 +10,7 @@ const post = () => {
         <div className="blog-card">
           <div className="media-block">
             <div className="category">
-              <a href="index.html#" title="View all posts in Design">
+              <a href="/blog/asdf" title="View all posts in Design">
                 Design
               </a>
             </div>

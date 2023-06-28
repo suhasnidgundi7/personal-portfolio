@@ -14,42 +14,42 @@ export const metadata = {
 const aboutMe = () => {
   return (
     <>
-      <div class="page-title">
+      <div className="page-title">
         <h2>
           About <span>Me</span>
         </h2>
       </div>
 
-      <div class="section-content">
+      <div className="section-content">
         {/* <!-- Personal Information --> */}
         <PersonalInformation />
         {/* <!-- End of Personal Information --> */}
 
-        <div class="white-space-50"></div>
+        <div className="white-space-50"></div>
 
         {/* <!-- Services --> */}
         <Services />
         {/* <!-- End of Services --> */}
 
-        <div class="white-space-30"></div>
+        <div className="white-space-30"></div>
 
         {/* <!-- Testimonials --> */}
         <Testimonials />
         {/* <!-- End of Testimonials --> */}
 
-        <div class="white-space-50"></div>
+        <div className="white-space-50"></div>
 
         {/* <!-- Clients --> */}
         <Clients />
         {/* <!-- End of Clients --> */}
 
-        <div class="white-space-50"></div>
+        <div className="white-space-50"></div>
 
         {/* <!-- Pricing --> */}
         <Pricing />
         {/* <!-- End of Pricing --> */}
 
-        <div class="white-space-50"></div>
+        <div className="white-space-50"></div>
 
         {/* <!-- Fun Facts --> */}
         <FunFacts />
