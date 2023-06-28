@@ -16,7 +16,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="assets/css/reset.css" type="text/css" />
         <link rel="stylesheet" href="assets/css/light.css" type="text/css" />
       </head>
       <body>
