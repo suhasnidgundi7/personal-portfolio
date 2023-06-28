@@ -66,7 +66,7 @@ const ContactForm = () => {
                 resetForm();
               })
               .catch((error) => {
-                alert(error);
+                console.log(error);
                 toast.error(
                   "⚠️ Oops! Something went wrong. Please try again later.",
                   {
