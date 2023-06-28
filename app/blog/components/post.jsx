@@ -6,9 +6,9 @@ const post = () => {
   return (
     <>
       {/* <!-- Blog Post 1 --> */}
-      <div className="item post-1">
-        <div className="blog-card">
-          <div className="media-block">
+      <div className="item post-1" >
+        <div className="blog-card " style={{borderRadius:"25px"}} >
+          <div className="media-block" style={{borderTopLeftRadius:"25px", borderTopRightRadius:"25px"}}>
             <div className="category">
               <a href="/blog/asdf" title="View all posts in Design">
                 Design
@@ -16,6 +16,7 @@ const post = () => {
             </div>
             <a href="">
               <Image
+              
                   width={100}
                   height={100}
                   src="/assets/images/blog/blog_post_1.jpg"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const portfolio = () => {
@@ -16,7 +17,7 @@ const portfolio = () => {
               <ul className="portfolio-filters">
                 <li className="active">
                   <a
-                    className="filter btn btn-sm btn-link"
+                    className="btn btn-sm "
                     data-group="category_all"
                   >
                     All
@@ -24,7 +25,7 @@ const portfolio = () => {
                 </li>
                 <li>
                   <a
-                    className="filter btn btn-sm btn-link"
+                    className="btn btn-sm "
                     data-group="category_detailed"
                   >
                     Detailed
@@ -32,7 +33,7 @@ const portfolio = () => {
                 </li>
                 <li>
                   <a
-                    className="filter btn btn-sm btn-link"
+                    className="btn btn-sm "
                     data-group="category_mockups"
                   >
                     Mockups
@@ -40,7 +41,7 @@ const portfolio = () => {
                 </li>
                 <li>
                   <a
-                    className="filter btn btn-sm btn-link"
+                    className="btn btn-sm "
                     data-group="category_soundcloud"
                   >
                     SoundCloud
@@ -48,7 +49,7 @@ const portfolio = () => {
                 </li>
                 <li>
                   <a
-                    className="filter btn btn-sm btn-link"
+                    className="btn btn-sm "
                     data-group="category_vimeo-videos"
                   >
                     Vimeo Videos
@@ -56,7 +57,7 @@ const portfolio = () => {
                 </li>
                 <li>
                   <a
-                    className="filter btn btn-sm btn-link"
+                    className="btn btn-sm "
                     data-group="category_youtube-videos"
                   >
                     YouTube Videos
@@ -71,8 +72,8 @@ const portfolio = () => {
                   data-groups='["category_all", "category_soundcloud"]'
                 >
                   <div className="portfolio-item-img">
-                    <img
-                      src="assets/images/portfolio/1.jpg"
+                    <Image width={100} height={150}
+                      src="/assets/images/portfolio/1.jpg"
                       alt="SoundCloud Audio"
                       title=""
                     />
@@ -93,12 +94,12 @@ const portfolio = () => {
                   data-groups='["category_all", "category_detailed"]'
                 >
                   <div className="portfolio-item-img">
-                    <img
-                      src="assets/images/portfolio/2.jpg"
+                    <Image width={100} height={150}
+                      src="/assets/images/portfolio/2.jpg"
                       alt="Media Project 2"
                       title=""
                     />
-                    <a href="portfolio-1.html" className="ajax-page-load"></a>
+                    <a href="portfolio-1.html" ></a>
                   </div>
 
                   <i className="far fa-file-alt"></i>
@@ -111,8 +112,8 @@ const portfolio = () => {
                   data-groups='["category_all", "category_vimeo-videos"]'
                 >
                   <div className="portfolio-item-img">
-                    <img
-                      src="assets/images/portfolio/3.jpg"
+                    <Image width={100} height={150}
+                      src="/assets/images/portfolio/3.jpg"
                       alt="Vimeo Video 1"
                       title=""
                     />
@@ -133,12 +134,12 @@ const portfolio = () => {
                   data-groups='["category_all", "category_detailed"]'
                 >
                   <div className="portfolio-item-img">
-                    <img
-                      src="assets/images/portfolio/4.jpg"
+                    <Image width={100} height={150}
+                      src="/assets/images/portfolio/4.jpg"
                       alt="Media Project 1"
                       title=""
                     />
-                    <a href="portfolio-1.html" className="ajax-page-load"></a>
+                    <a href="portfolio-1.html" ></a>
                   </div>
 
                   <i className="far fa-file-alt"></i>
@@ -151,15 +152,15 @@ const portfolio = () => {
                   data-groups='["category_all", "category_mockups"]'
                 >
                   <div className="portfolio-item-img">
-                    <img
-                      src="assets/images/portfolio/5.jpg"
+                    <Image width={100} height={150}
+                      src="/assets/images/portfolio/5.jpg"
                       alt="Mockup Design 1"
                       title=""
                     />
                     <a
                       className="lightbox"
                       title="Mockup Design 1"
-                      href="assets/images/portfolio/full/5.jpg"
+                      href="/assets/images/portfolio/full/5.jpg"
                     ></a>
                   </div>
 
@@ -173,8 +174,8 @@ const portfolio = () => {
                   data-groups='["category_all", "category_youtube-videos"]'
                 >
                   <div className="portfolio-item-img">
-                    <img
-                      src="assets/images/portfolio/6.jpg"
+                    <Image width={100} height={150}
+                      src="/assets/images/portfolio/6.jpg"
                       alt="YouTube Video 1"
                       title=""
                     />
