@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { useRouteAnimationContext } from "@/context/GlobalContext";
+import { useGlobalContext, useRouteAnimationContext } from "@/context/GlobalContext";
 import { toast } from "react-toastify";
 import ContactReCAPTCHA from "./ContactReCAPTCHA";
 
@@ -10,7 +10,7 @@ const ContactForm = () => {
   const [theme, setTheme] = useState("light");
   const form = useRef();
 
-  const { userTheme } = useRouteAnimationContext(); // Accessing userTheme from the context
+  const { userTheme } = useGlobalContext(); // Accessing userTheme from the context
 
   useEffect(() => {
     setTheme(userTheme);

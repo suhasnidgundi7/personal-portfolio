@@ -1,12 +1,13 @@
 "use client"
-import { createContext, useContext, useEffect, useState } from "react";
+
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const GlobalContext = createContext({
   userDevice: "",
   fromPage: "",
   toPage: "",
-  setFromPage: () => "",
-  setToPage: () => "",
+  setFromPage: () => {},
+  setToPage: () => {},
   userTheme: "light",
 });
 
@@ -27,11 +28,15 @@ export const GlobalContextProvider = ({ children }) => {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
     if (/android/i.test(userAgent)) {
-      setUserDevice("Android");
+      setUserDevice("Phone"); // Match Android devices to "Phone"
     } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      setUserDevice("iOS");
+      setUserDevice("Phone"); // Match iOS devices to "Phone"
+    } else if (/TV/.test(userAgent)) {
+      setUserDevice("TV"); // Match TV devices
+    } else if (/tablet/i.test(userAgent)) {
+      setUserDevice("Tablet"); // Match tablet devices
     } else {
-      setUserDevice("Desktop");
+      setUserDevice("Desktop"); // Match remaining devices to "Desktop"
     }
   }, []);
 
@@ -43,5 +48,6 @@ export const GlobalContextProvider = ({ children }) => {
     </GlobalContext.Provider>
   );
 };
+
 
 export const useGlobalContext = () => useContext(GlobalContext);
