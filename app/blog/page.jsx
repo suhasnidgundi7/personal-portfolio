@@ -1,5 +1,5 @@
 import React from "react";
-import Post from "./components/post";
+import Post from "./components/Post";
 
 const blog = () => {
   return (
@@ -13,9 +13,6 @@ const blog = () => {
         <div className="row">
           <div className="col-xs-12 col-sm-12">
             <div className="blog-masonry two-columns clearfix">
-              <Post/>
-              <Post/>
-              <Post/>
               <Post/>
             </div>
           </div>

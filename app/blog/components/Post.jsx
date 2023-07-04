@@ -1,14 +1,22 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
-import "../blog.css"
+import "../blog.css";
 
-const post = () => {
+const Post = () => {
   return (
     <>
       {/* <!-- Blog Post 1 --> */}
-      <div className="item post-1" >
-        <div className="blog-card " style={{borderRadius:"25px"}} >
-          <div className="media-block" style={{borderTopLeftRadius:"25px", borderTopRightRadius:"25px"}}>
+      <div className="item post-1">
+        <div className="blog-card " style={{ borderRadius: "25px" }}>
+          <div
+            className="media-block"
+            style={{
+              borderTopLeftRadius: "25px",
+              borderTopRightRadius: "25px",
+            }}
+          >
             <div className="category">
               <a href="/blog/asdf" title="View all posts in Design">
                 Design
@@ -16,14 +24,13 @@ const post = () => {
             </div>
             <a href="">
               <Image
-              
-                  width={100}
-                  height={100}
-                  src="/assets/images/blog/blog_post_1.jpg"
-                  alt="Why I Switched to Sketch For UI Design"
-                  title=""
-                  className="blog-img"
-                />
+                width={100}
+                height={100}
+                src="/assets/images/blog/blog_post_1.jpg"
+                alt="Why I Switched to Sketch For UI Design"
+                title=""
+                className="blog-img"
+              />
 
               <div className="mask"></div>
             </a>
@@ -43,4 +50,4 @@ const post = () => {
   );
 };
 
-export default post;
+export default Post;

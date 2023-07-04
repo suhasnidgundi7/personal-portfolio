@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { useRouteAnimationContext } from "@/context/RouteAnimationContext";
+import { useRouteAnimationContext } from "@/context/GlobalContext";
 import { toast } from "react-toastify";
 import ContactReCAPTCHA from "./ContactReCAPTCHA";
 

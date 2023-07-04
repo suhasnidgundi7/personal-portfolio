@@ -1,5 +1,5 @@
 import Header from "./components/header";
-import { RouteAnimationContextProvider } from "@/context/RouteAnimationContext";
+import { GlobalContextProvider } from "@/context/GlobalContext";
 import { Analytics } from "@vercel/analytics/react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./global.css"
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <RouteAnimationContextProvider>
+        <GlobalContextProvider>
           {/* Animated Background */}
           <div
             className="lm-animated-bg"
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
               </div>
             </div>
           </div>
-        </RouteAnimationContextProvider>
+        </GlobalContextProvider>
       </body>
     </html>
   );
