@@ -11,8 +11,6 @@ import SkeletonPost from "./SkeletonPost";
 const Post = ({ Posts }) => {
   const { userDevice } = useGlobalContext();
 
-  console.log(userDevice);
-
   const fetchPost = async (page) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
