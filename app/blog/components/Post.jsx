@@ -6,11 +6,12 @@ import Image from "next/image";
 import { useInfiniteQuery } from "react-query";
 import { useIntersection } from "@mantine/hooks";
 import { useGlobalContext } from "@/context/GlobalContext";
+import SkeletonPost from "./SkeletonPost";
 
 const Post = ({ Posts }) => {
   const { userDevice } = useGlobalContext();
 
-  console.log(userDevice)
+  console.log(userDevice);
 
   const fetchPost = async (page) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -18,9 +19,7 @@ const Post = ({ Posts }) => {
     let postsPerPage = 4; // Default number of posts per page
 
     // Adjust the number of posts per page based on the userDevice
-    if (
-      userDevice === "Phone"
-    ) {
+    if (userDevice === "Phone") {
       postsPerPage = 2;
     } else if (userDevice === "Tablet" || userDevice === "Desktop") {
       postsPerPage = 4;
@@ -108,6 +107,9 @@ const Post = ({ Posts }) => {
           ))}
         </div>
       ))}
+
+      {isFetching && <SkeletonPost userDevice={userDevice} />}
+
       <button
         onClick={fetchNextPage}
         disabled={!hasNextPage || isFetchingNextPage}
