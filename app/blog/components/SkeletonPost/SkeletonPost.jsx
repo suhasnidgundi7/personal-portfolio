@@ -1,4 +1,6 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
+import "./SkeletonPost.css";
 
 const SkeletonPost = ({ userDevice }) => {
   let skeletonCount = 0;
@@ -12,9 +14,9 @@ const SkeletonPost = ({ userDevice }) => {
   }
 
   return (
-    <div>
+    <>
       {Array.from({ length: skeletonCount }).map((_, index) => (
-        <div key={index} className="item post-1">
+        <div key={uuidv4()} className="item skeleton-post">
           <div
             className="blog-card glow-animation"
             style={{ borderRadius: "25px" }}
@@ -26,20 +28,17 @@ const SkeletonPost = ({ userDevice }) => {
                 borderTopRightRadius: "25px",
               }}
             >
-              <div
-                className="skeleton-image glow-animation"
-                style={{ height: "150px", width: "100%" }}
-              ></div>
+              <div className="skeleton-image glow-animation"></div>
             </div>
             <div className="post-info">
-              <div className="skeleton-category glow-animation" style={{height:"20px", width:"50%"}}></div>
+              <div className="skeleton-category glow-animation"></div>
               <br />
-              <div className="skeleton-title glow-animation" style={{height:"20px"}}></div>
+              <div className="skeleton-title glow-animation"></div>
             </div>
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

@@ -168,23 +168,4 @@
   }
 }
 
-/* Skeleton Glow Animation */
-@keyframes skeleton-glow {
-  0% {
-    background-position: -400px 0;
-  }
-  100% {
-    background-position: 400px 0;
-  }
-}
 
-.glow-animation {
-  animation: skeleton-glow 1.5s linear infinite;
-  background: linear-gradient(
-    90deg,
-    rgba(224, 224, 224, 0.4) 0px,
-    rgba(224, 224, 224, 0.8) 50%,
-    rgba(224, 224, 224, 0.4) 100%
-  );
-  background-size: 800px 100px;
-}
