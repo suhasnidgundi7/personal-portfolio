@@ -2,7 +2,8 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./SkeletonPost.css";
 
-const SkeletonPost = ({ userDevice }) => {
+const SkeletonPost = ({ userDevice, Status, Error }) => {
+
   let skeletonCount = 0;
 
   if (userDevice === "Phone") {

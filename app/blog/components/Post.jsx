@@ -35,7 +35,7 @@ const Post = ({ Posts }) => {
       },
     }
   );
-  
+
   console.table([
     {
       "Data : ": data,
@@ -51,7 +51,9 @@ const Post = ({ Posts }) => {
     <>
       <PostList posts={data?.pages.flatMap((page) => page)} />
 
-      {isFetchingNextPage && <SkeletonPost userDevice={userDevice} />}
+      {isFetchingNextPage && (
+        <SkeletonPost Status={status} Error={error} userDevice={userDevice} />
+      )}
 
       <button
         onClick={fetchNextPage}
